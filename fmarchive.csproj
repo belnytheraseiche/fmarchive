@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Company></Company>
+    <Product>FM Archive</Product>
+    <Copyright>© belnytheraseiche</Copyright>
+    <Version>1.0.1</Version>
+    <AssemblyName>fmarchive</AssemblyName>
+    <AssemblyTitle>A command-line utility for creating and expanding custom, encrypted, and text-encoded archives.</AssemblyTitle>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PackageTags>encryption;archive;security;z85;base32;base122;fm-index</PackageTags>
+    <Description>
+      It securely packages specified files and directories into a format designed to be highly portable and capable of bypassing strict email attachment filters.
+    </Description>
+  </PropertyGroup>
+  <!-- for dev -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DebugType>portable</DebugType>
+    <DefineConstants></DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <!-- for release -->
+  <PropertyGroup Condition="'$(Configuration)' == 'ReleaseWinX64' OR '$(Configuration)' == 'ReleaseWinArm64'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants></DefineConstants>
+    <Optimize>true</Optimize>
+    <PublishAot>true</PublishAot>
+    <OptimizationPreference>Speed</OptimizationPreference>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseSystemResourceKeys>true</UseSystemResourceKeys>
+    <PublishSingleFile>true</PublishSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove=".work/**" />
+    <EmbeddedResource Remove=".work/**" />
+    <Content Remove=".work/**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BelNytheraSeiche.WaveletMatrix" Version="1.0.5" />
+    <PackageReference Include="System.IO.Hashing" Version="9.0.10" />
+  </ItemGroup>
+</Project>

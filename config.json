@@ -1,0 +1,10 @@
+{
+    "default_name": "archive",
+    "cryptography_key": "john doe",
+    "compression_level": 0,
+	"text_encoder": "base64",
+    "comments": [
+        "text_encoder: base32, base64, base122 or z85",
+        "compression_level: 0 is optimal, 1 is fastest, 2 is no compression, 3 is smallest"
+    ]
+}
