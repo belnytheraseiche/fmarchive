@@ -47,7 +47,7 @@ Before using `FM Archive`, you must create a `config.json` file in the same dire
 ```json
 {
   "default_name": "my_archive",
-  "cryptography_key": "Your-Super-Secret-Key-Must-Be-32-Bytes",
+  "cryptography_key": "Your-Super-Secret-Key-String",
   "compression_level": 0,
   "text_encoder": "base64"
 }
