@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <Company></Company>
     <Product>FM Archive</Product>
     <Copyright>© belnytheraseiche</Copyright>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <AssemblyName>fmarchive</AssemblyName>
     <AssemblyTitle>A command-line utility for creating and expanding custom, encrypted, and text-encoded archives.</AssemblyTitle>
     <ApplicationIcon>icon.ico</ApplicationIcon>
@@ -41,7 +41,7 @@
     <Content Remove=".work/**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="BelNytheraSeiche.WaveletMatrix" Version="1.0.5" />
-    <PackageReference Include="System.IO.Hashing" Version="9.0.10" />
+    <PackageReference Include="BelNytheraSeiche.WaveletMatrix" Version="1.0.6" />
+    <PackageReference Include="System.IO.Hashing" Version="10.0.0" />
   </ItemGroup>
 </Project>
